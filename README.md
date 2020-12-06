@@ -1,7 +1,7 @@
 # deep_backup
 An single click backup program
 
-This program recreates a single click backup system like iCloud, or similar. This can be done easily with a `cp` command, but for me, who takes local backups quite often, typing it in becomes cumbersome.
+This program recreates a single click backup system like iCloud, or similar. This can be done with the `cp` command, but for me, who takes local backups quite often, typing in the paths becomes cumbersome. Manually copying folders is also slow, with the system prompting for each file that already exists. The Unix terminal command `cp -r` automates this, and this wrapper program makes it even simpler, by setting default origin and destinations.
 
 ## Steps for use:
 Look out for the two `"CHANGE ME"` strings. Replace those with the pathnames of your origin and destination folders. Remember to escape characters as required by Python, and the Terminal. I suggest set them to copy your innermost folder you need to backup regularly. To strike a balance between speed and convenience.
