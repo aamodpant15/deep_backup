@@ -5,9 +5,9 @@ import argparse
 def backup(origin, dest, verbose = False):
     v = ""
     if origin is None:
-        origin = "/Users/aamod/Aamod/UMass/"
+        origin = "CHANGE ME"
     if dest is None:
-        dest = "/Volumes/HDD/Aamod/UMass/"
+        dest = "CHANGE ME"
     if verbose:
         v = "-v "
     cmd = "cp "+v+"-R \"" + origin + "\" \"" + dest +"\""
