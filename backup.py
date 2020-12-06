@@ -1,16 +1,20 @@
 import os
 import argparse
+import platform
 
 # os.system("cp -v -R \"/Users/aamod/Aamod/UMass/\" \"/Volumes/HDD/Aamod/UMass/\"")
 def backup(origin, dest, verbose = False):
     v = ""
     if origin is None:
-        origin = "CHANGE ME"
+        origin = "/Users/aamod/Aamod/UMass/"
     if dest is None:
-        dest = "CHANGE ME"
+        dest = "/Volumes/HDD/Aamod/UMass/"
     if verbose:
         v = "-v "
-    cmd = "cp "+v+"-R \"" + origin + "\" \"" + dest +"\""
+    if platform.system() == 'Windows':
+        cmd = "robocopy " + origin + " " + dest + " /I /V"
+    else:
+        cmd = "cp "+v+"-R \"" + origin + "\" \"" + dest +"\""
     os.system(cmd)
 
 def main():
