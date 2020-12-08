@@ -6,9 +6,9 @@ import platform
 def backup(origin, dest, verbose = False):
     v = ""
     if origin is None:
-        origin = "./"
+        origin = "CHANGE ME"
     if dest is None:
-        dest = "./"
+        dest = "CHANGE ME"
     if verbose:
         v = "-v "
     if platform.system() == 'Windows':
