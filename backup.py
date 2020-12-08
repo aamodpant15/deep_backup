@@ -6,9 +6,9 @@ import platform
 def backup(origin, dest, verbose = False):
     v = ""
     if origin is None:
-        origin = "/Users/aamod/Aamod/UMass/"
+        origin = "./"
     if dest is None:
-        dest = "/Volumes/HDD/Aamod/UMass/"
+        dest = "./"
     if verbose:
         v = "-v "
     if platform.system() == 'Windows':
